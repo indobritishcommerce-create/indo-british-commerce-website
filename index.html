@@ -8,44 +8,6 @@
 </head>
 <body>
 
-        <!-- Welcome Pop-up Modal -->
-        <div id="welcomeModal" class="modal">
-                    <div class="modal-content">
-                                    <span class="close-modal">&times;</span>
-                                    <div class="modal-header">
-                                                        <h2>Welcome to <span class="highlight">Indo-British Commerce Solutions!</span></h2>
-                                                        <p>Register for <span class="highlight">Free Trade Consultation</span> and Expert Guidance on UK-India Import-Export!</p>
-                                                    </div>
-                                    <div class="modal-form">
-                                                        <input type="text" id="popupName" placeholder="Enter Your Name" required>
-                                                        <input type="email" id="popupEmail" placeholder="Enter Your Email" required>
-                                                        <input type="text" id="popupCompany" placeholder="Company Name">
-                                                        <button class="modal-btn" onclick="submitPopupForm()">GET STARTED NOW</button>
-                                                        <p class="modal-tagline">Unlock Your UK-India Trade Potential Today!</p>
-                                                    </div>
-                                </div>
-                </div>
-    <header>
-        <nav>
-            <div class="logo">Indo-British Commerce Solutions Ltd</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Your Gateway to Imports</h1>
-            <p class="subtitle">Empowering Trade Between Nations</p>
-            <a href="#contact" class="cta-button">Get Started</a>
-        </div>
-    </section>
-
-    <section id="about" class="about">
         <div class="container">
             <h2>About Us</h2>
             <p>Indo-British Commerce Solutions Ltd specializes in facilitating seamless trade between India and the United Kingdom. With expertise in import-export operations, regulatory compliance, and international business development, we help businesses navigate the complexities of cross-border commerce.</p>
@@ -91,41 +53,5 @@
         <p>&copy; 2025 Indo-British Commerce Solutions Ltd. All rights reserved.</p>
     </footer>
 
-        <script>
-                    // Pop-up Modal functionality
-                    window.addEventListener('load', function() {
-                                    setTimeout(function() {
-                                                        document.getElementById('welcomeModal').style.display = 'flex';
-                                                    }, 1000); // Show popup after 1 second
-                                });
-
-                    // Close modal when clicking X
-                    document.querySelector('.close-modal').addEventListener('click', function() {
-                                    document.getElementById('welcomeModal').style.display = 'none';
-                                });
-
-                    // Close modal when clicking outside
-                    window.addEventListener('click', function(event) {
-                                    if (event.target.id === 'welcomeModal') {
-                                                        document.getElementById('welcomeModal').style.display = 'none';
-                                                    }
-                                                });
-
-                    // Handle form submission
-                    function submitPopupForm() {
-                                    const name = document.getElementById('popupName').value;
-                                    const email = document.getElementById('popupEmail').value;
-                                    const company = document.getElementById('popupCompany').value;
-
-                                    if (name && email) {
-                                                        // Redirect to contact section
-                                                        document.getElementById('welcomeModal').style.display = 'none';
-                                                        window.location.href = '#contact';
-                                                        alert('Thank you! We will contact you soon.');
-                                                    } else {
-                                                        alert('Please fill in your name and email.');
-                                                    }
-                                }
-                </script>
 </body>
 </html>
